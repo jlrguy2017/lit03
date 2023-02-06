@@ -1,0 +1,297 @@
+:root {
+    --blue: rgb(0, 51, 153);
+    --hablue: rgb(181, 204, 251);
+    --orange: rgb(255, 102, 0);
+    --haorange: rgb(255, 204, 153);
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+@media screen and (max-width: 560px) {
+    .mgb {
+        flex-direction: column;
+    }
+    .mgb .left {
+        width: 100% !important;
+    }
+    .mgb .right {
+        padding-left: 0 !important;
+    }
+}
+
+h3,
+h4 {
+    color: var(--blue);
+}
+
+button,
+input {
+    padding: 2px;
+    padding-left: 3px;
+    border: solid 1px black;
+}
+.btns *:not(:last-child) {
+    margin-right: 1em;
+}
+
+ul,
+ol {
+    list-style-position: inside;
+    padding-left: 0;
+}
+ol li::marker {
+    font-size: 1.3em;
+}
+
+.ad {
+    text-align: center;
+}
+
+a {
+    font-weight: bold;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+
+.flex {
+    display: flex;
+}
+.fce {
+    justify-content: center;
+    align-items: center;
+}
+.a-ri {
+    text-align: right;
+}
+.center {
+    text-align: center;
+}
+.fa-ri {
+    margin-left: auto;
+}
+.oor {
+    color: var(--orange);
+}
+.lt {
+    font-size: 9px;
+}
+.ctac *:not(:last-child) {
+    margin-bottom: 0.75em;
+}
+
+body {
+    font-family: verdana, arial, sans-serif, helvetica;
+    font-size: 8pt;
+}
+
+.bbb {
+    margin: auto;
+    max-width: 800px;
+}
+.bg {
+    background-color: rgb(229, 229, 229);
+}
+
+header {
+    color: white;
+    background-color: var(--blue);
+    padding: 5px;
+    padding-left: 7px;
+    padding-right: 7px;
+}
+header a,
+nav:not(.trans) a {
+    color: white;
+    font-weight: normal;
+}
+header .top p {
+    line-height: 1.75em;
+}
+header .top .right {
+    margin-left: auto;
+}
+header .top .right a {
+    font-weight: bold;
+}
+
+header .logo-container {
+    padding-top: 1em;
+    padding-bottom: 3em;
+    text-align: center;
+}
+
+nav {
+    background-color: rgb(102, 152, 203);
+    text-align: center;
+    padding: 0.7em;
+    color: rgb(28, 6, 58);
+}
+nav.trans {
+    background: none;
+}
+nav.trans a {
+    color: black;
+}
+nav a {
+    color: white;
+}
+nav a:not(:first-child) {
+    margin-left: 0.3em;
+}
+nav a:not(:last-child) {
+    margin-right: 0.4em;
+}
+nav a:hover {
+    color: #040c5c;
+}
+
+main {
+    padding: 10px;
+}
+
+.mgb {
+    display: flex;
+}
+.mgb .left {
+    width: 64%;
+}
+.mgb .right {
+    flex-grow: 1;
+    padding-left: 1em;
+}
+.mgb .daform {
+    width: 100%;
+}
+
+.daform {
+    display: flex;
+    flex-direction: column;
+    border: solid 1px var(--blue);
+    padding: 0.5em;
+    text-align: center;
+}
+.daform form {
+    padding: 3px;
+    padding-bottom: 1.5em;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.box,
+.robox {
+    border: solid 2px black;
+}
+.robox {
+    width: fit-content;
+    margin: auto;
+    display: table;
+    padding: 3px;
+    text-align: center;
+}
+
+.featured {
+    border: solid 1px var(--haorange);
+    margin-bottom: 1em;
+}
+.featured.pd .content {
+    padding-bottom: 1em;
+}
+.featured.blue {
+    padding: 1px;
+    border: 0;
+}
+.featured.bluer {
+    border-color: var(--hablue);
+}
+.featured.blue .title,
+.featured.bluer .title {
+    background-color: var(--hablue);
+}
+.featured .title {
+    display: flex;
+    font-weight: bold;
+    width: 100%;
+    padding: 0.5em;
+    padding-left: 7px;
+    background-color: var(--haorange);
+}
+.featured .content {
+    overflow: auto;
+}
+.featured .imgtable {
+    display: flex;
+    justify-content: space-between;
+    padding: 1em;
+    padding-top: 0.5em;
+}
+.featured .imgtable div {
+    display: flex;
+    flex-direction: column;
+}
+.featured .imgtable div:not(:last-child) {
+    margin-right: 3.5em;
+}
+.featured .imgtable p {
+    text-align: center;
+    margin-bottom: 5px;
+}
+.featured .imgtable img {
+    width: 90px;
+}
+.featured .txttable {
+    display: flex;
+    padding: 0.5em;
+}
+.featured .txttable div {
+    width: 50%;
+}
+
+.news {
+    display: flex;
+    width: 100%;
+}
+.news div {
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    padding: 0.5em;
+    background-color: var(--hablue);
+    border: solid 1px var(--blue);
+}
+.news div section {
+    flex-grow: 1;
+}
+.news div:not(:last-child) {
+    border-right: 0;
+}
+.news .mlink {
+    margin-top: 1em;
+    text-align: right;
+}
+.news a::before {
+    display: inline-block;
+    margin-right: 0.25em;
+    content: "» ";
+    color: rgb(204, 0, 0);
+}
+
+footer {
+    padding: 1em;
+    padding-bottom: 0;
+    text-align: center;
+}
+footer *:not(:last-child) {
+    margin-bottom: 0.5em;
+}
+footer nav {
+    padding: 0;
+    padding-bottom: 0.5em;
+}
